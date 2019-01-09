@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import Typography from '@material-ui/core/Typography';
 // import './App.css';
-
 import FileReader from './components/FileReader/fileReader.js';
 
 class App extends Component {
@@ -92,7 +92,10 @@ class App extends Component {
   render() {
     return (
           <div>
-          <h1> Apple Music 2018 Playback Stats Wrapped</h1>
+          <Typography variant='display1' align='center' gutterBottom>
+           Apple Music 2018 Playback Stats Wrapped
+           </Typography>
+
             <FileReader updatePlayData = {this.handlePlayData}/>
           </div>
     );
