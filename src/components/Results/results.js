@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
-import CSVReader from 'react-csv-reader'
-// import './App.css';
-//import FileReader from './components/FileReader/fileReader.js';
-import Home from './components/Home/home.js';
-import Results from './components/Results/results.js';
 
-class App extends Component {
+class Results extends Component {
   constructor(props){
     super(props)
     this.state = {
-      playData : []
+      playData : props.playData,
+      topSongs : [],
+      topArtists : []
     }
-      this.handlePlayData = this.handlePlayData.bind(this)
   }
-
-  handlePlayData = (data) => {
+  componentDidMount(){
     console.log("New data set has been loaded")
-    this.setState({playData: data})
+    //this.setState({playData: data})
     //console.log(this.state.playData[5])
+    var data
+    data = this.state.playData
 
-    var aggregatedByArtist = []// {}
+    var aggregatedByArtist = []
     var aggregatedBySong = []
     var total_playtime_ms = 0.0
 
@@ -84,39 +81,29 @@ class App extends Component {
     })
     var total_playtime_min = total_playtime_ms /(1000*60)
     var playback_hours = total_playtime_min / 60
+
+    this.setState({topSongs: aggregatedBySong,
+    topArtists: aggregatedByArtist})
+
     console.log(playback_hours)
     console.log("You listened to: " + total_playtime_min + " minutes of music this year")
     console.log(aggregatedByArtist)
     console.log(aggregatedBySong)
-
+    console.log(aggregatedBySong[1][1])
+    console.log(this.state.topSongs[1][1])
   }
-//this.handlePlayData
+
   render() {
+    return (
+      <div>
+        <Typography variant='display1' align='center' gutterBottom>
+         Apple Music 2018 Playback Stats Wrapped
+         </Typography>
+        Your top song is {this.state.topSongs[1]}
+        Your top artist is {this.state.topArtists[0]}
 
-    if(this.state.playData.length > 1){
-      return (
-        <div>
-          <Typography variant='display1' align='center' gutterBottom>
-           Your Apple Music Stats
-           </Typography>
-
-           <Results playData={this.state.playData}>
-           </Results>
-         </div>
-       );
-    }
-    else{
-      return (
-            <div>
-              <Home updatePlayData={data=>{
-                this.setState({playData: data})
-              }}>
-              </Home>
-            </div>
-      );
-    }
-
+    </div>
+    );
   }
 }
-
-export default App;
+export default Results;

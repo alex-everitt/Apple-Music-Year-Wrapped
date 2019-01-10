@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
-//import './App.css';
 
 import ReactFileReader from 'react-file-reader';
 
@@ -49,6 +47,7 @@ class FileReader extends Component {
       <ReactFileReader fileTypes={".csv"} handleFiles={this.fileHandler}>
         <button className='btn'>Upload</button>
       </ReactFileReader>
+
     );
   }
 }
