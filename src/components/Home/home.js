@@ -18,7 +18,7 @@ class Home extends Component {
     return (
       <div>
         <Typography variant='display1' align='center' gutterBottom>
-         Apple Music 2018 Playback Stats Wrapped
+         Apple Music Year Wrapped
          </Typography>
 
         <CSVReader
