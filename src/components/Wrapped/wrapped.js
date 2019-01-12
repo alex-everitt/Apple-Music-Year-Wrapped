@@ -86,16 +86,21 @@ class Wrapped extends Component {
           </Grid>
 
           <Grid id="header-row" container spacing={8}>
-          <Grid item xs ={4}>
-            <Typography variant='h6' align='center' gutterBottom style={text_style}>
-              I Listened To
-            </Typography>
+            <Grid item xs ={4}>
+              <Typography variant='h6' align='center' gutterBottom style={text_style}>
+                I Listened To
+              </Typography>
+            </Grid>
           </Grid>
+
+          <Grid id="h-row" container spacing={8}>
             <Grid item xs ={4}>
                   <Typography variant='h6' align='center' gutterBottom style={text_style}>
                    Your Top Songs
                    </Typography>
             </Grid>
+          </Grid>
+          <Grid id="head-row" container spacing={8}>
             <Grid item xs ={4}>
                   <Typography variant='h6' align='center' gutterBottom style={text_style}>
                    Your Top Artists
@@ -103,14 +108,14 @@ class Wrapped extends Component {
             </Grid>
           </Grid>
 
-          {topDivs}
+
 
 
         </Paper>
       </div>
     );
 }
-
+//{topDivs}
     // <Grid id="info-row" container spacing={8}>
     //   <Grid item xs ={4}>
     //         <Typography variant='subtitle1' align='left' gutterBottom>

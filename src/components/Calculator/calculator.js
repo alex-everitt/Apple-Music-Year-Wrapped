@@ -16,7 +16,7 @@ class Calculator{
           if(playback_timestamp.getFullYear() === 2018){
             var playTime = Math.abs(parseFloat(data[i][6]))//playback duration
 
-            if( !isNaN(playTime)){
+            if( !isNaN(playTime) && playTime > 30000){
               total_playtime_ms = total_playtime_ms + playTime
 
               for(var j=0;j<aggregatedByArtist.length;j++){//Check if this artist has been previously added to the data base
