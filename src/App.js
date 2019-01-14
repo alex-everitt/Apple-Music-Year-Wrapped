@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
+import './App.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './components/Home/home.js';
 import Results from './components/Results/results.js';
