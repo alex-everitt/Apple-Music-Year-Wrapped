@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Image from '../../wrapped_background.jpg';
-import Chungus from '../../big_chungus.jpg';
+import Background from '../../wrapped_background.jpg';
+import Album_Art from '../../wrapped_album_art.png';
 
 import CardMedia from '@material-ui/core/CardMedia'
 
@@ -26,7 +26,7 @@ const box_style = {
 
 const paper_style = {
   padding: '10px',
-  backgroundImage: `url(${Image})`,
+  backgroundImage: `url(${Background})`,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   height: '100%',
@@ -50,7 +50,7 @@ class Wrapped extends Component {
       playData : props.playData,
       topSongs : [],
       topArtists : [],
-      imageUrl:"https://s3.dexerto.com/articles/Big-Chungus.jpg"
+      imageUrl:""
     }
   }
 
@@ -61,12 +61,12 @@ class Wrapped extends Component {
             for (let index = 0; index < 10; index++) {
               let songDiv= <ListItem>
                     <ListItemText disableTypography
-                    primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>{index+1}. {this.props.topSongs[index]} ({this.props.topSongPlays[index]} plays)</Typography>} />
+                    primary={<Typography type="body1" style={{ color: '#FFFFFF' }}>{index+1}. {this.props.topSongs[index]} ({this.props.topSongPlays[index]} plays)</Typography>} />
              </ListItem>
 
              let artistDiv= <ListItem>
                    <ListItemText disableTypography
-                   primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>{index+1}. {this.props.topArtists[index]} ({this.props.topArtistPlays[index]} plays)</Typography>} />
+                   primary={<Typography type="body1" style={{ color: '#FFFFFF' }}>{index+1}. {this.props.topArtists[index]} ({this.props.topArtistPlays[index]} plays)</Typography>} />
             </ListItem>
 
               songDivs.push(songDiv)
@@ -79,7 +79,7 @@ class Wrapped extends Component {
       marginRight: 'auto',
       height: '50%',
       width: '50%',
-      backgroundImage: imageURL,
+      backgroundImage: `url(${Album_Art})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'
     };
@@ -95,12 +95,12 @@ class Wrapped extends Component {
           </Grid>
         </Grid>
 
-        <Grid id="header-row" container spacing={2}>
+        <Grid id="header-row" justify='center'container spacing={2}>
           <Grid item xs ={5}>
-            <Typography variant='h6' align='center' gutterBottom style={text_style}>
+            <Typography variant='h4' align='center' gutterBottom style={text_style}>
               I Listened To
             </Typography>
-            <Typography variant='h2' align='center' gutterBottom style={text_style}>
+            <Typography variant='h4' align='center' gutterBottom style={text_style}>
              {Math.floor(this.props.totalPlaytime)}
              </Typography>
              <Typography variant='h6' align='center' gutterBottom style={text_style}>
@@ -113,7 +113,7 @@ class Wrapped extends Component {
           </Grid>
 
           <Grid item xs ={4}>
-                <Typography variant='h6' align='center' gutterBottom style={text_style}>
+                <Typography variant='h4' align='center' gutterBottom style={text_style}>
                  Your Top Songs
                  </Typography>
                  <List >
@@ -123,7 +123,7 @@ class Wrapped extends Component {
           </Grid>
 
           <Grid item xs ={3}>
-                <Typography variant='h6' align='center' gutterBottom style={text_style}>
+                <Typography variant='h4' align='center' gutterBottom style={text_style}>
                  Your Top Artists
                  </Typography>
                  <List >
