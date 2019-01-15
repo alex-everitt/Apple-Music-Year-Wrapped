@@ -5,7 +5,7 @@ This project is written in React using the Material-UI component libraries.
 # Landing Page
 Users can select their local 'Apple Music Play Activity.csv' files
 
-![Alt text](public/landing_page.png?raw=true "Landing Page")'
+![Alt text](public/landing_page.PNG?raw=true "Landing Page")'
 
 # Output
 After a few seconds, you will recieve your Year Wrapped Stats, similar to the sample below
