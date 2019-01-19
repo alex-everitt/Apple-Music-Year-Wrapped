@@ -1,5 +1,5 @@
 ## Overview
-This project allows users to upload their 'Apple Music Play Activity.csv' files (which can be downloaded from Apple's privacy portal) and recieve a summary of their listening habits, similar to Spotify's "Year Wrapped" feature. I was inspired to build this project when my friends started posting their "2018 Wrapped" Spotify listening habits playlists on social media but I was unable to get a similar summary as an Apple Music subscriber. 
+This project allows users to upload their 'Apple Music Play Activity.csv' files (which can be downloaded from Apple's privacy portal) and receive a summary of their listening habits, similar to Spotify's "Year Wrapped" feature. I was inspired to build this project when my friends started posting their "2018 Wrapped" Spotify listening habits playlists on social media but I was unable to get a similar summary as an Apple Music subscriber.
 This project is written in React using the Material-UI component libraries.
 
 # Landing Page
