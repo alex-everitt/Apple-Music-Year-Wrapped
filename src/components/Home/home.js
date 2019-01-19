@@ -4,11 +4,11 @@ import CSVReader from 'react-csv-reader'
 import Paper from '@material-ui/core/Paper';
 import Sample_Output from '../../sample_output.png';
 
-const paper_style = {
+const home_paper_style = {
   padding: '20px',
   backgroundColor: '#f2f2f2'
 };
-
+//This component serves as the landing page
 class Home extends Component {
   constructor(props){
     super(props)
@@ -24,10 +24,11 @@ class Home extends Component {
   render() {
     return (
       <div>
-      <Paper zDepth={3} style ={paper_style}>
+      <Paper style ={home_paper_style}>
         <Typography variant='h3' align='center' gutterBottom>
          Apple Music Year Wrapped
          </Typography>
+         1. Download your Apple Music Usage Data from https://privacy.apple.com/<br/>
          <img src={window.location.origin + '/folder_layout.png'} style={{marginLeft: 'auto',
          marginRight: 'auto',
          height: '50%',
@@ -35,7 +36,7 @@ class Home extends Component {
 
         <CSVReader
           cssClass="csv-reader-input"
-          label="Select your 'Apple Music Play Activity.csv' file"
+          label="2. Select your 'Apple Music Play Activity.csv' file"
           onFileLoaded={this.props.updatePlayData}
           onError={this.logError}
           inputId="ObiWan"
@@ -43,10 +44,10 @@ class Home extends Component {
           />
       </Paper>
 
-      <Paper style={paper_style}>
-      <Typography variant='body1' gutterBottom>
-       After a few seconds you will recieve your Stats Wrapped!
-       </Typography>
+      <Paper style={home_paper_style}>
+
+       3. After a few seconds you will recieve your Stats Wrapped!<br/>
+
         <img src={Sample_Output} style={{marginLeft: 'auto',
         marginRight: 'auto',
         height: '50%',
