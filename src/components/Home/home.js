@@ -31,8 +31,8 @@ class Home extends Component {
          1. Download your Apple Music Usage Data from https://privacy.apple.com/<br/>
          <img src={window.location.origin + '/folder_layout.png'} style={{marginLeft: 'auto',
          marginRight: 'auto',
-         height: '50%',
-         width: '50%'}} />
+         maxHeight: '30%',
+         maxWidth: '60%'}} />
 
         <CSVReader
           cssClass="csv-reader-input"
@@ -50,8 +50,8 @@ class Home extends Component {
 
         <img src={Sample_Output} style={{marginLeft: 'auto',
         marginRight: 'auto',
-        height: '50%',
-        width: '50%'}}/>
+        maxHeight: '30%',
+        maxWidth: '60%'}}/>
       </Paper>
     </div>
     );

@@ -88,8 +88,8 @@ class Wrapped extends Component {
       backgroundImage: imageURL,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      minHeight: '50vh',
-      minWidth: '50vh'
+      minHeight: '40vh',
+      minWidth: '40vh'
     };
 
     return (
