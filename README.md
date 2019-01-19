@@ -8,7 +8,7 @@ Users can select their local 'Apple Music Play Activity.csv' files
 ![Alt text](public/landing_page.PNG?raw=true "Landing Page")'
 
 # Output
-After a few seconds, you will recieve your Year Wrapped Stats, similar to the sample below
+After a few seconds, you will recieve your Year Wrapped Stats including the album art to your most listened to song, similar to the sample below
 ![Alt text](public/sample_output.png?raw=true "Output")'
 
 
