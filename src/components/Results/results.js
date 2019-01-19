@@ -5,6 +5,8 @@ import Paper from '@material-ui/core/Paper'
 import Calculator from '../Calculator/calculator'
 import Wrapped from '../Wrapped/wrapped'
 
+//This component uses the methods of the "Calculator" object to determine important stats
+  //and then uses that info to generate the Wrapped banner
 class Results extends Component {
   constructor(props){
     super(props)
@@ -16,12 +18,9 @@ class Results extends Component {
       topArtistPlays: [],
       totalPlaytime: []
     }
-    //will have many state variables that will be used to determine what will be rendered,
-      //inside of componentDidMount we will call the methods to calculate stuff and set the state variables
   }
   componentDidMount(){
     console.log("New data set has been loaded")
-
     var data
     data = this.state.playData
 
@@ -56,21 +55,4 @@ class Results extends Component {
   }
 }
 
-// <Paper>
-//   <div class="row">
-//       <div class="col-sm-12">
-//           <Typography variant='display2' align='center' gutterBottom>
-//            Your 2018 Wrapped
-//            </Typography>
-//       </div>
-//   </div>
-//     <div class="row">
-//       <div class="col-sm-6">
-//       Your top song is {this.state.topSongs[1]}
-//       </div>
-//       <div class="col-sm-6">
-//       Your top artist is {this.state.topArtists[0]}
-//       </div>
-//     </div>
-// </Paper>
 export default Results;
